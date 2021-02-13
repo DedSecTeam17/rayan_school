@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1036f430-6958-4646-a75b-7122e3f0ee10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Auth/SignIn.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/CreateStudent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/HomeIndex.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/HomePage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/home/ViewStudent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/partials/NavBar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/partials/NotFound.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/date_to_from_now.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/users_session_services.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainApp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
-    </list>
+    <list default="true" id="1036f430-6958-4646-a75b-7122e3f0ee10" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +50,7 @@
       <updated>1613178555903</updated>
       <workItem from="1613178557389" duration="2533000" />
       <workItem from="1613207135510" duration="5633000" />
-      <workItem from="1613246824131" duration="9888000" />
+      <workItem from="1613246824131" duration="10193000" />
     </task>
     <servers />
   </component>
