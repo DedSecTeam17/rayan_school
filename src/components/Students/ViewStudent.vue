@@ -1,6 +1,17 @@
 <template>
     <div>
+        <div class="row m-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item " aria-current="page">Grade</li>
 
+                    <li class="breadcrumb-item " aria-current="page">Students</li>
+
+                    <li class="breadcrumb-item " aria-current="page">{{student["fullName"]}}</li>
+
+                </ol>
+            </nav>
+        </div>
         <div class="row m-2" v-if="!isLoading">
 
 
@@ -19,7 +30,7 @@
                         </div>
                     </div>
                 </div>
-                <table class="table" v-if="!isCreatingInstallments">
+                <table class="table table-dark mt-4" v-if="!isCreatingInstallments">
                     <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -100,6 +111,7 @@
                 studentInstallments: [],
                 studentInstallmentsRef: [],
                 remainingFee: 0.0,
+                studentsRouter: "",
 
                 installments: '',
                 fees: '',
@@ -124,6 +136,7 @@
         },
         created() {
             this.getInfoById();
+
         },
         methods: {
 
@@ -132,8 +145,9 @@
                 try {
                     this.isLoadingInstallments = true;
                     let refId = this.$route.params["id"];
+                    let gradeRef = this.$route.params["grade_id"];
 
-                    let querySnapshot = await db.doc(`students/${refId}/`)
+                    let querySnapshot = await db.doc(`grades/${gradeRef}/students/${refId}`)
                         .collection("installments")
                         .get();
 
@@ -169,7 +183,9 @@
 
                 if (this.fees <= this.remainingFee) {
                     try {
-                        let reference = await db.doc(`students/${refId}/`).collection("installments").add({
+                        let gradeRef = this.$route.params["grade_id"];
+
+                        let reference = await db.doc(`grades/${gradeRef}/students/${refId}`).collection("installments").add({
                             "title": this.installments,
                             "fees": this.fees,
                         });
@@ -196,8 +212,9 @@
             async deleteInstallments(installments) {
                 let ref = this.studentInstallmentsRef[this.studentInstallments.indexOf(installments)];
                 let refId = this.$route.params["id"];
+                let gradeRef = this.$route.params["grade_id"];
 
-                db.collection(`students/${refId}/installments`).doc(ref).delete().then((res) => {
+                db.collection(`grades/${gradeRef}/students/${refId}/installments`).doc(ref).delete().then((res) => {
                     this.getInfoById();
                 })
 
@@ -206,11 +223,13 @@
 
             getInfoById() {
                 this.isLoading = true;
-                let refId = this.$route.params["id"];
-                console.log(refId)
+                let studentRef = this.$route.params["id"];
+                let gradeRef = this.$route.params["grade_id"];
 
-                db.collection("students")
-                    .doc(refId)
+                // console.log(refId)
+
+                db.collection(`grades/${gradeRef}/students`)
+                    .doc(studentRef)
                     .get()
                     .then(snapshot => {
                         const document = snapshot.data()

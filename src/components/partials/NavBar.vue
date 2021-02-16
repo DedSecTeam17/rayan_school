@@ -1,5 +1,5 @@
 <template>
-    <nav v-if="isAuth" class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav v-if="isAuth" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="#"><img src="@/assets/logo.png" width="50" height="50"
                                               class="rounded-circle img-fluid">
         </a>
@@ -12,7 +12,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <router-link active-class="active" class="nav-link" to="/Home/index"><i class="fa fa-home"></i>Home
+                    <router-link active-class="active" class="nav-link" to="/Home/index">Home
                     </router-link>
 
                 </li>

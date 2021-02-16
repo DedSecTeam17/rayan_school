@@ -10,21 +10,26 @@ import Toasted from 'vue-toasted';
 //
 // import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { firestorePlugin } from 'vuefire'
+import {firestorePlugin} from 'vuefire'
 
 import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/database'
 import 'firebase/firestore'
 import HomePage from "./components/home/HomePage";
-import HomeIndex from "./components/home/HomeIndex";
 // import Toasted from 'vue-toasted';
 
 import 'bootstrap'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
-import ViewStudent from "./components/home/ViewStudent";
-import CreateStudent from "./components/home/CreateStudent";
+import ViewStudent from "./components/Students/ViewStudent";
+import CreateStudent from "./components/Students/CreateStudent";
+import GradesIndex from "./components/grades/GradesIndex";
+import CreateGrade from "./components/grades/CreateGrade";
+import StudentsIndex from "./components/Students/StudentsIndex";
+import UpdateGrade from "./components/grades/UpdateGrade";
+import GradesMain from "./components/grades/GradesMain";
+import StudentMainPage from "./components/Students/StudentMainPage";
 
 // setup vue router
 
@@ -49,36 +54,81 @@ Vue.prototype.firebase = firebase;
 Vue.prototype.firebaseDb = firebaseApp.database();
 Vue.prototype.firebaseAuth = firebaseApp.auth();
 
-export  const db = firebaseApp.firestore();
+export const db = firebaseApp.firestore();
 // window.db = db;
 
-const { TimeStamp, GeoPoint } = firebase.firestore
-export { TimeStamp, GeoPoint }
+const {TimeStamp, GeoPoint} = firebase.firestore
+export {TimeStamp, GeoPoint}
 
 // if using Firebase JS SDK < 5.8.0
-db.settings({ timestampsInSnapshots: true })
+db.settings({timestampsInSnapshots: true})
 
 
 const routes = [
     {
         path: '/home',
         component: HomePage,
-        children : [
+        children: [
             {
-                path: 'index', component: HomeIndex, meta: {
+                path: 'grades', component: GradesMain, meta: {
                     requiresAuth: true
                 },
+                children: [
+                    {
+                        path: 'index', component: GradesIndex, meta: {
+                            requiresAuth: true
+                        },
+                    },
+                    {
+                        path: 'create', component: CreateGrade, meta: {
+                            requiresAuth: true
+                        },
+                    },
+                    {
+                        path: ':grade_id/update', component: UpdateGrade, meta: {
+                            requiresAuth: true
+                        },
+                    },
+                    {
+                        path: ':grade_id/students', component: StudentMainPage, meta: {
+                            requiresAuth: true
+                        },
+                        children: [
+                            {
+                                path: 'index', component: StudentsIndex, meta: {
+                                    requiresAuth: true
+                                },
+
+                            },
+
+                            {
+                                path: 'create', component: CreateStudent, meta: {
+                                    requiresAuth: true
+                                },
+
+                            },
+                            {
+                                path: ':id/view', component: ViewStudent, meta: {
+                                    requiresAuth: true
+                                },
+
+                            },
+                        ]
+
+                    },
+                ]
+
             },
-            {
-                path: 'create', component: CreateStudent, meta: {
-                    requiresAuth: true
-                },
-            },
-            {
-                path: ':id/view', component: ViewStudent, meta: {
-                    requiresAuth: true
-                },
-            },
+            // {
+            //     path: 'create', component: CreateStudent, meta: {
+            //         requiresAuth: true
+            //     },
+            // },
+            // {
+            //     path: ':id/view', component: ViewStudent, meta: {
+            //         requiresAuth: true
+            //     },
+            // },
 
         ]
     },
@@ -108,7 +158,7 @@ router.beforeEach(((to, from, next) => {
     } else {
 
         if (UserSession.isAuth()) {
-            next('/home/index')
+            next('/home/grades/index')
         } else {
 
             next()
@@ -116,7 +166,6 @@ router.beforeEach(((to, from, next) => {
         }
     }
 }));
-
 
 
 new Vue({

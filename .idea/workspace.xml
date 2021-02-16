@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1036f430-6958-4646-a75b-7122e3f0ee10" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Students/StudentMainPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Students/UpdateStudent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/grades/CreateGrade.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/grades/GradesIndex.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/grades/GradesMain.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/grades/UpdateGrade.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/grades/ViewGrade.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/CreateStudent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Students/CreateStudent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/HomeIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Students/StudentsIndex.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/ViewStudent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Students/ViewStudent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/partials/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partials/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,8 +26,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -31,10 +44,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\WebFrontEndProjects\rayan\school_app\src\components\Students" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\WebFrontEndProjects\rayan\school_app\src\assets" />
       <recent name="F:\WebFrontEndProjects\rayan\school_app\src\components" />
@@ -53,11 +70,20 @@
       <updated>1613178555903</updated>
       <workItem from="1613178557389" duration="2533000" />
       <workItem from="1613207135510" duration="5633000" />
-      <workItem from="1613246824131" duration="10499000" />
+      <workItem from="1613246824131" duration="11296000" />
+      <workItem from="1613399031304" duration="470000" />
+      <workItem from="1613420672217" duration="5874000" />
+      <workItem from="1613491419553" duration="7147000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1613492216295">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1613492216295" />
   </component>
 </project>

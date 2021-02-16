@@ -18,18 +18,11 @@
                                            type="email">
                                     <p class="invalid-feedback" v-if="!$v.fullName.required">Full name required</p>
                                 </div>
-                                <div class="form-group row  mx-2">
-                                    <label class="form-label " for="class">Class</label>
-                                    <input :class="{'is-invalid':$v.studentClass.$error,'is-valid':!$v.studentClass.$invalid}"
-                                           v-model.trim="$v.studentClass.$model" class="form-control "
-                                           id="class" placeholder="Class"
-                                           name="password" type="number">
 
-                                    <p class="invalid-feedback" v-if="!$v.studentClass.required">Class required</p>
 
-                                </div>
+
                                 <div class="form-group row  mx-2">
-                                    <label class="form-label " for="fess">Class</label>
+                                    <label class="form-label " for="fess">Fees</label>
                                     <input :class="{'is-invalid':$v.fees.$error,'is-valid':!$v.fees.$invalid}"
                                            v-model.trim="$v.fees.$model" class="form-control "
                                            id="fess" placeholder="Fees"
@@ -68,7 +61,6 @@
         data() {
             return {
                 fullName: '',
-                studentClass: '',
                 fees: '',
 
                 showError: false,
@@ -80,10 +72,6 @@
 
             fullName: {
                 required
-            },
-            studentClass: {
-                required
-
             },
             fees: {
                 required
@@ -105,15 +93,19 @@
             },
             async createStudent() {
                 //reference
+
+
+                let gradeRef = this.$route.params["grade_id"];
+
+
                 try {
-                    let reference = await db.collection('students').add({
+                    let reference = await db.doc(`grades/${gradeRef}`).collection("students").add({
                         "fullName": this.fullName,
-                        "class": this.studentClass,
                         "fees": this.fees,
                     });
                     this.isLoading = false
 
-                    await this.$router.push("/home/index");
+                    await this.$router.push("index");
 
                 } catch (e) {
                     this.isLoading = false
