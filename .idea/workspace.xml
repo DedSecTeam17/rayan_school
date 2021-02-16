@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1036f430-6958-4646-a75b-7122e3f0ee10" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Students/StudentMainPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Students/UpdateStudent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/grades/CreateGrade.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/grades/GradesIndex.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/grades/GradesMain.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/grades/UpdateGrade.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/grades/ViewGrade.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/CreateStudent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Students/CreateStudent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/HomeIndex.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Students/StudentsIndex.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/home/ViewStudent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Students/ViewStudent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/partials/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/partials/NavBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/app.60eb037c.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.48d6f402.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/app.48d6f402.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.66f02151.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/chunk-vendors.66f02151.js.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +64,7 @@
       <workItem from="1613246824131" duration="11296000" />
       <workItem from="1613399031304" duration="470000" />
       <workItem from="1613420672217" duration="5874000" />
-      <workItem from="1613491419553" duration="7147000" />
+      <workItem from="1613491419553" duration="7513000" />
     </task>
     <servers />
   </component>
